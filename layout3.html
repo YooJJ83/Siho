@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>layout1</title>
+    <style>
+        * {padding: 0; margin: 0;}
+        body { background: #f3e5f5;}
+        #wrap{ width:1200px; margin: 0 auto;}/* 가운데 정렬 margin: 0 auto*/
+        header{ width:100%; height: 150px; background: #9575cd;}
+        nav{ width:100%; height: 100px; background: #7e57c2;} 
+        aside  {float: left;  width:30%; height: 900px; background: #9575cd;}     
+        .s1{float: left;  width:70%; height: 300px; background: #29b6f6;}
+        .s2{float: left;  width:70%; height: 300px; background: #03a9f4;}
+        .s3{float: left;  width:70%; height: 300px; background: #039be5;}
+        
+        footer{ clear : both; width:100%;height: 150px; background: #5e35b1;}
+        
+        /*320 /480 /600 /768 /960 /1024 /1280*/
+        @media (max-width: 1280px){
+           
+        }
+        @media (max-width: 768px){
+            aside {height: 600px;}
+            .s3 { float: none; width: 100%;clear : both;}  
+
+        }
+        @media (max-width: 600px){            
+            aside {height: 300px;}
+            .s2 { float: none; width: 100%;clear : both;}  
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header></header>
+        <nav></nav>
+        <aside></aside>
+        <section class="s1"></section>
+        <section class="s2"></section>
+        <section class="s3"></section>
+        <footer></footer>
+    </div>
+</body>
+</html>
