@@ -4,7 +4,8 @@
 /* layout */
 body{ width:100%; }
 #header {  }
-#header .container .title{ float: left; padding-left: 10px; margin-right: 10px;}
+#header .container { margin-right: 10px;}
+#header .container .title{ float: left; padding-left: 10px; margin-right: 15px;}
 #nav { width:100%; margin-top: 20px; text-align: center;}
 #main {width:100%; margin-top: 20px; padding-left: 10px; margin-right: 10px;}
 #contents {border-right: 1px solid #dbdbdb;
@@ -30,6 +31,22 @@ transition: color 0.3s ease;}
 .quick a:hover {color: #ccc;}
 
 .title { display: inline-block;}
+.search {float: left; height: 30px; width: 300px; border: 1px solid #4a9abf; background: #ffffff;}
+.search input{background: #fff; border: 0; padding: 4px 8px; color: #44bfde;
+    font-size: 16px; width: 200px; float: left; outline: none;}
+
+.search button{border: 0; cursor: pointer; width: 50px; height: 100%; float: right;
+    background: #44bfde;}
+header::after { content: ''; display: table; clear: both }
+
+
+/* tit */
+.tit {text-align: center;padding: 15px 0; display: none; width:100%; }
+.tit .tit_btn {position: absolute; right: 0; top:0;display: inline-block; width: 44px; height: 44px;  background-color: #3192bf; color: #fff; font-size: 25px;
+border-radius: 50%; margin-right: 20px;
+}
+.tit .tit_btn i {line-height: 44px;}
+
 
 .nav { width:100%;    /*background-color: #4a9abf; border-radius: 10px;   margin-left: 80px; */     line-height: 28px; border-top: 1px solid #b2ebf2; border-bottom: 3px solid #4a9abf;}
 .nav li {float: left;  font-family: 'NanumSquare'; font-size: 20px; padding-top: 4px;  position: relative; white-space: nowrap; width: 18%; text-align: center;box-sizing: border-box; margin-bottom: 7px;}
@@ -46,6 +63,9 @@ article .articleHeader h2::before { content: ''; width: 5px; height: 5px; border
 .cont_right article .articleHeader::after { content: ''; display: table; clear: both }
 
 .cont_left article {float: left; border : 1px solid #e0e0e0; width:96%; margin :5px; box-sizing: border-box; position: relative; border-radius: 5px;}
+
+.cont_left article .articleContents li div .left { float : left;  }
+.cont_left article .articleContents li div .right{ float : right; margin-right: 10px; }
 
 .articleContents li { position: relative; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding-left: 8px; margin-top: 14px;margin-left: 20px; font-size: 14px;}
 .articleContents li::before { content:'';width: 3px; height: 3px; border-radius: 50%; background-color: #449c32;position: absolute; left:0;top:9px;}
@@ -70,12 +90,14 @@ article .articleHeader h2::before { content: ''; width: 5px; height: 5px; border
 }
 @media (max-width: 768px){
     .nav li { width:50%}    
-    .container>.cont_right article{ width:100%}    
+    .container>.cont_right article{ width:92%}    
     .container>.cont_left { display: none;}  
 }
 @media (max-width: 600px){
-    .quick {display: none;} /*반응형에선 보이지 않게*/
+    .quick { visibility: hidden;} /*반응형에선 보이지 않게*/
     .nav { display: none;}    
+    .tit { display: block; margin-right: 20px;}
+    
 }
 @media (max-width: 480px){
     .nav { display: none;}
