@@ -61,6 +61,8 @@ article .articleHeader h2::before { content: ''; width: 5px; height: 5px; border
 }
 @media (max-width: 1024px){
     .nav li { width:25%}
+    .container>.cont_right { width:100%}    
+    .container>.cont_left { display: none;}  
 }
 
 @media (max-width: 960px){
@@ -68,7 +70,8 @@ article .articleHeader h2::before { content: ''; width: 5px; height: 5px; border
 }
 @media (max-width: 768px){
     .nav li { width:50%}    
-    article{ width:100%}    
+    .container>.cont_right article{ width:100%}    
+    .container>.cont_left { display: none;}  
 }
 @media (max-width: 600px){
     .quick {display: none;} /*반응형에선 보이지 않게*/
